@@ -1,5 +1,4 @@
 use db_akuntan;
-
 SELECT  accounting_transaction.TRANSACTION_DATE, accounting_transaction.DESCRIPTION,transaction_detail.AMOUNT,ogl_account_balance.AMOUNT as TOTAL, gl_account.DESCRIPTION as TYPE,transaction_detail.DEBIT_CREDIT_FLAG,gl_type.DESCRIPTION AS CATEGORY
 FROM ogl_account_balance,transaction_detail,accounting_transaction,gl_account,gl_type 
 where SUBSTR(ogl_account_balance.GL_ACCOUNT_ID,1,1)=3
